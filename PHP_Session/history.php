@@ -7,6 +7,7 @@ if (isset($_GET['del'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <head>
     <title>Riwayat Perhitungan Kalkulator</title>
@@ -14,12 +15,12 @@ if (isset($_GET['del'])) {
 
 <body>
     <div>
-        <div>
+        <div class="container">
             <header>
-                <h1>Riwayat Perhitungan</h1>
+                <h3>Riwayat Perhitungan</h3>
                 <a href="calculator.php">&laquo; Kembali ke Kalkulator</a>
             </header>
-            <table>
+            <table class="table table-success table-striped">
                 <?php foreach ($_SESSION['history'] as $idx => $data) : ?>
                     <tr>
                         <?php
