@@ -44,6 +44,10 @@ require "menu.php";
                     </tr>
                 <?php endforeach; ?>
                 <tr>
+                    <td>Nama Pemesan</td>
+                    <td><input type="text" name="pemesan"></td>
+                </tr>
+                <tr>
                     <td colspan="3">
                         <input type="submit" value="Hitung Total">
                     </td>

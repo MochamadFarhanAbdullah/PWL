@@ -1,6 +1,10 @@
 <?php
 require "menu.php";
 $menu = array_merge($makanan, $minuman);
+if (isset($_POST["pemesan"])) {
+    $pemesan = $_POST["pemesan"];
+    unset($_POST["pemesan"]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +43,12 @@ $menu = array_merge($makanan, $minuman);
             <tr>
                 <th colspan="3">Total Bayar</th>
                 <th>Rp. <?= $total ?></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Pesanan Atas Nama</td>
+                <td><?= $pemesan; ?></td>
             </tr>
         </table>
         <a href="index.php">Kembali ke pemesanan menu.</a>
