@@ -67,7 +67,7 @@ if (isset($_GET['nama'])) {
             <?php
             $bidang = ['persegi', 'lingkaran', 'segitiga'];
             $query = $_GET;
-            $url = explode("?", $_SERVER['REQUEST_URL'])[0];
+            $url = explode("?", $_SERVER['REQUEST_URI'])[0];
             foreach ($bidang as $bid) {
                 $query['bidang'] = $bid;
                 $url_query = $url . "?" . http_build_query($query);
