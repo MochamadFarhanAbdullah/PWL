@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
         echo "Masukkan Nama Anda!";
     }
 }
-
+//if session = true
 if (isset($_SESSION['username'])) {
 ?>
     <h1>Selamat Datang di Aplikasi Latihan PHP <?php echo $_SESSION['username']; ?>!</h1>
