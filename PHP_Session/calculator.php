@@ -3,7 +3,7 @@ include "function.php";
 
 
 $angka1 = null;
-$angka1 = null;
+$angka2 = null;
 $hasil = null;
 $operator = '+';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

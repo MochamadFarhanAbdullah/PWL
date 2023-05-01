@@ -1,0 +1,41 @@
+<?php
+session_start();
+
+if (isset($_GET['del'])) {
+    unset($_SESSION['history'][$_GET['del']]);
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+    <title>Riwayat</title>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <header>
+                <h3>Riwayat</h3>
+                <a href="index.php">&laquo; Kembali</a>
+            </header>
+            <table class="table table-success table-striped">
+                <?php foreach ($_SESSION['history'] as $idx => $data) : ?>
+                    <tr>
+                        
+                        <th><?= $data[0] ?></th>
+                        <th><?= $data[1] ?></th>
+                        <th><?= $data[2] ?></th>
+                        <th><?= $data[3] ?></th>
+                        <td>
+                            <a href="riwayat.php?del=<?= $idx ?>"> Hapus </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
